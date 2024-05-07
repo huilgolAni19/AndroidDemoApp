@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainMenuFragment">
+
+    <fragment
+        android:id="@+id/MainMenuFragment"
+        android:name="com.example.androiddemo.fragments.mainmenufragment.MainMenuFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_main_menu">
+
+
+        <action
+            android:id="@+id/action_MainMenuFragment_to_taskOneFragment"
+            app:destination="@id/taskOneFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_TaskTwoFragment"
+            app:destination="@id/TaskTwoFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_taskThreeFragment"
+            app:destination="@id/taskThreeFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_taskFourFragment"
+            app:destination="@id/taskFourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TaskTwoFragment"
+        android:name="com.example.androiddemo.fragments.tasktwo.TaskTwoFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_task_two">
+
+        <action
+            android:id="@+id/action_TaskTwoFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskOneFragment"
+        android:name="com.example.androiddemo.fragments.taskone.TaskOneFragment"
+        android:label="Task 1"
+        tools:layout="@layout/fragment_task_one" >
+        <action
+            android:id="@+id/action_taskOneFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskThreeFragment"
+        android:name="com.example.androiddemo.fragments.taskthree.TaskThreeFragment"
+        android:label="Task 3"
+        tools:layout="@layout/fragment_task_three" >
+        <action
+            android:id="@+id/action_taskThreeFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskFourFragment"
+        android:name="com.example.androiddemo.fragments.taskfour.TaskFourFragment"
+        android:label="fragment_task_four"
+        tools:layout="@layout/fragment_task_four" >
+        <action
+            android:id="@+id/action_taskFourFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+</navigation>
